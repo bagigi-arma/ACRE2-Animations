@@ -1,0 +1,10 @@
+releases/*
+hemtt
+hemtt.exe
+.hemttout
+keys/*
+.hemtt/local
+hemtt.toml
+*.pbo
+*.biprivatekey
+build*.bat

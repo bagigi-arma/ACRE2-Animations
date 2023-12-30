@@ -1,0 +1,16 @@
+name = "ACRE2 Bagigi Animations"
+mainprefix = "z"
+prefix = "Radio_Animations"
+author = "Bagigi Team"
+
+[files]
+include = [
+	"mod.cpp",
+	"meta.cpp",
+	"README.md",
+	"LICENSE",
+	"ACRE_Animations.paa",
+]
+
+[version]
+git_hash = 0
