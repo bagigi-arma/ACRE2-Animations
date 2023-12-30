@@ -1,6 +1,6 @@
 name = "ACRE2 Bagigi Animations"
 mainprefix = "z"
-prefix = "Radio_Animations"
+prefix = "ACRE_BGG_Animations"
 author = "Bagigi Team"
 
 [files]

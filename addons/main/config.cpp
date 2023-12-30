@@ -14,7 +14,7 @@ class CfgVehicles {
 	class Jet_Radio: House_F {
 		scope = 2;
 		displayName = "Jet's Radio";
-		model = "\z\radio_animations\addons\main\h189.p3d"; // filepath
+		model = "\z\acre_bgg_animations\addons\main\h189.p3d"; // filepath
 		vehicleClass = "Structures"; // Object in the in-game editor
 		mapSize = 20.27;
 		cost = 40000;		
@@ -24,14 +24,14 @@ class CfgVehicles {
 //-- Run init.sqf on player existance
 class Extended_PostInit_EventHandlers {
 	class Radio_Animations_PostInitHandler {
-		init = "nul = [] execVM '\z\radio_animations\addons\main\fnc\Init.sqf'";
+		init = "nul = [] execVM '\z\acre_bgg_animations\addons\main\fnc\Init.sqf'";
 	};
 };
 
 //-- Add CBA settings
 class Extended_PreInit_EventHandlers {
 	class Radio_Animations_PreInitHandler {
-		init = "call compile preprocessFileLineNumbers '\z\radio_animations\addons\main\fnc\cba_settings.sqf'";
+		init = "call compile preprocessFileLineNumbers '\z\acre_bgg_animations\addons\main\fnc\cba_settings.sqf'";
 	};
 };
 
@@ -158,7 +158,7 @@ class CfgGesturesMale {
 			mask = "mask_OnlyAffectLeftArm";
 		};
 		class radioAnims_Hand: radioAnims_main {
-			file = "\z\radio_animations\addons\main\radio_Hand.rtm";
+			file = "\z\acre_bgg_animations\addons\main\radio_Hand.rtm";
 			looped = 1;
 			mask = "mask_OnlyAffectLeftArm";		
 		};
