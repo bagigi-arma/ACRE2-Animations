@@ -91,7 +91,7 @@
 		false,
 		{}
 	] call CBA_Settings_fnc_init;
-} forEach [["PRC343",0],["PRC152",0],["PRC148",2],["SEM52SL",0],["Others", 2]];
+} forEach [["PRC343",0], ["PRC152",0], ["PRC148",2], ["SEM52SL",0], ["BF888S",2], ["Others",2]];
 
 //-- Controls
 [

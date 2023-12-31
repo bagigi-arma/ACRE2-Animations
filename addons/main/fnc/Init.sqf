@@ -39,6 +39,14 @@ fn_radioAnims_hand = {
 					[[0.656,-0.876,0.231],[-0.288,-0.465,1.236]]
 				];
 			};
+			case "ACRE_BF888S": {
+				radioAnims_modelToUse = "idi\acre\addons\sys_bf888s\Data\models\acre_bf888s_model.p3d";
+				radioAnims_dattach = [ [-0.14,-0.05,-0.01], [-0.11,0.03,0.02] ];
+				radioAnims_dvector = [
+					[[0.956,-0.176,0.231],[-0.288,-0.465,0.836]],
+					[[0.656,-0.876,0.231],[-0.288,-0.465,1.236]]
+				];
+			};
 			default {
 				radioAnims_modelToUse = "Jet_radio";
 				radioAnims_dattach = [ [0,-0.04,-0.01], [-0.01,-0.04,0] ];
@@ -103,6 +111,7 @@ fn_radioAnims_vest = {
 		case "ACRE_PRC343": {radioAnims_animToUse = radioAnims_cba_preference_PRC343};
 		case "ACRE_PRC148": {radioAnims_animToUse = radioAnims_cba_preference_PRC148};
 		case "ACRE_SEM52SL": {radioAnims_animToUse = radioAnims_cba_preference_SEM52SL};
+		case "ACRE_BF888S": {radioAnims_animToUse = radioAnims_cba_preference_BF888S};
 		default {radioAnims_animToUse = radioAnims_cba_preference_Others};
 	};
 
