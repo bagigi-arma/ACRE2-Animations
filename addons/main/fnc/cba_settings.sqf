@@ -19,7 +19,7 @@
 		"Array containing helmets/goggles that should be considered when doing the ear animation. Use '[headgear player, goggles player]' to allow all helmets/goggles."
 	],
 	"ACRE2 Animations",
-	'["G_WirelessEarpiece_F"]',
+	'["G_WirelessEarpiece_F", "H_Watchcap_blk", "H_Watchcap_cbr", "H_Watchcap_camo", "H_Watchcap_khk", "H_Booniehat_khk_hs", "H_Cap_oli_hs", "H_HeadSet_black_F", "H_HeadSet_orange_F", "H_HeadSet_red_F", "H_HeadSet_white_F", "H_HeadSet_yellow_F", "H_Cap_marshal", "H_MilCap_blue", "H_MilCap_gen_F", "H_MilCap_ghex_F", "H_MilCap_grn", "H_MilCap_gry", "H_MilCap_ocamo", "H_MilCap_mcamo", "H_MilCap_taiga", "H_MilCap_tna_F", "H_MilCap_wdl", "H_MilCap_dgtl", "H_MilCap_eaf", "H_Shemag_olive_hs"]',
 	0,
 	{radioAnims_cba_Earpieces = call compile radioAnims_cba_Earpieces}
 ] call CBA_fnc_addSetting;
