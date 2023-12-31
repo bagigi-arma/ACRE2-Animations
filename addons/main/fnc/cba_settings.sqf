@@ -75,12 +75,19 @@
 
 //-- Individual Radio Settings
 {
+	_x params ["_radio", "_default"];
 	[
-		"radioAnims_cba_preference_"+(_x select 0),
+		"radioAnims_cba_preference_"+_radio,
 		"LIST",
-		["Preferred Animation ("+(_x select 0)+")", "Preferred Animation for this radio. Doesn't mean that it will always be used as the vest/ear animations are only used when the player has a vest/headset from the vest/headset listPreferred Animation for this radio. Doesn't mean that it will always be used as the vest/ear animations are only used when the player has a vest/headset from the vest/headset list."],
+		[
+			"Preferred Animation ("+_radio+")", "Preferred Animation for this radio.\nDoesn't mean that it will always be used as the vest/ear animations are only used when the player has\na vest/headset from the vest/headset listPreferred Animation for this radio."
+		],
 		"ACRE2 Animations",
-		[["Vest","Ear","Hand"], ["Vest","Ear","Hand"], (_x select 1)],
+		[
+			["Vest","Ear","Hand"],
+			["Vest","Ear","Hand"],
+			(_default)
+		],
 		false,
 		{}
 	] call CBA_Settings_fnc_init;
