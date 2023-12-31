@@ -70,7 +70,7 @@ fn_radioAnims_hand = {
 		player playActionNow radioAnims_Hand;
 		radioAnims_radioModel = createSimpleObject [radioAnims_modelToUse,position player];
 		radioAnims_radioModel attachto [player,radioAnims_dattach,"lefthand"];
-		[[radioAnims_radioModel,radioAnims_dvector],"setVectorDirAndUp",true,false] call BIS_fnc_MP;
+		[radioAnims_radioModel, radioAnims_dvector] remoteExec ["setVectorDirAndUp"];
 	};
 };
 
