@@ -74,17 +74,14 @@ fn_radioAnims_hand = {
 	};
 };
 
-fn_radioAnims_Ear = {
-	if ((headgear player in radioAnims_cba_Earpieces) || (goggles player in radioAnims_cba_Earpieces)) then {
-		player playActionNow radioAnims_Ear;
-	} else {
-		call fn_radioAnims_hand;
-	};
+fn_radioAnims_canDoEar = {
+	(headgear player in radioAnims_cba_Earpieces) || (goggles player in radioAnims_cba_Earpieces)
 };
 
-fn_radioAnims_vest = {
+fn_radioAnims_canDoVest = {
 	private _vestConfig = configFile >> "CfgWeapons" >> (vest player) >> "itemInfo";
-	if (
+
+	(
 		vest player in radioAnims_cba_vests || 
 		(
 			radioAnims_cba_vestarmor && 
@@ -93,11 +90,7 @@ fn_radioAnims_vest = {
 				(getNumber (_vestConfig >> "armor") > 5)
 			)
 		)
-	) then {
-		player playActionNow radioAnims_Vest;
-	} else {
-		call fn_radioAnims_hand;
-	};
+	)
 };
 
 //-- Start speaking on radio
@@ -126,9 +119,27 @@ fn_radioAnims_vest = {
 	//-- Use the setting
 	radioAnims_playerAnimated = true;
 	switch (radioAnims_animToUse) do {
-		case "Hand": {call fn_radioAnims_hand};
-		case "Ear": {call fn_radioAnims_Ear};
-		case "Vest": {call fn_radioAnims_vest};
+		case "Hand": {
+			call fn_radioAnims_hand;
+		};
+		case "Ear": {
+			if (call fn_radioAnims_canDoEar) exitWith {
+				player playActionNow radioAnims_Ear;
+			};
+			if (call fn_radioAnims_canDoVest) exitWith {
+				player playActionNow radioAnims_Vest;
+			};
+			call fn_radioAnims_hand;
+		};
+		case "Vest": {
+			if (call fn_radioAnims_canDoVest) exitWith {
+				player playActionNow radioAnims_Vest;
+			};
+			if (call fn_radioAnims_canDoEar) exitWith {
+				player playActionNow radioAnims_Ear;
+			};
+			call fn_radioAnims_hand;
+		};
 	};
 }, Player] call CBA_fnc_addEventHandler;
 
