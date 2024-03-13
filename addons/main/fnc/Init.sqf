@@ -83,9 +83,17 @@ fn_radioAnims_Ear = {
 };
 
 fn_radioAnims_vest = {
-	_cond1 = (getNumber (configFile >> "CfgWeapons" >> (vest player) >> "itemInfo" >> "HitpointsProtectionInfo" >> "Chest" >> "armor") > 5);
-	_cond2 = (getNumber (configFile >> "CfgWeapons" >> (vest player) >> "itemInfo" >> "armor") > 5);
-	if (vest player in radioAnims_cba_vests || ((_cond1 || _cond2) && radioAnims_cba_vestarmor)) then {
+	private _vestConfig = configFile >> "CfgWeapons" >> (vest player) >> "itemInfo";
+	if (
+		vest player in radioAnims_cba_vests || 
+		(
+			radioAnims_cba_vestarmor && 
+			(
+				(getNumber (_vestConfig >> "HitpointsProtectionInfo" >> "Chest" >> "armor") > 5) || 
+				(getNumber (_vestConfig >> "armor") > 5)
+			)
+		)
+	) then {
 		player playActionNow radioAnims_Vest;
 	} else {
 		call fn_radioAnims_hand;
