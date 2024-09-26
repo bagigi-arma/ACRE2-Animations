@@ -5,4 +5,4 @@ This is a repack of the [ACRE Animations](https://steamcommunity.com/sharedfiles
 ACRE2 Bagigi Animations is available [on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3126781754).
 Any changes from the original's latest version, as of 18th Jun 2022, can be viewed in the commit tree.
 
-This re-release is licenced using the [Arma Public License Share Alike (APL-SA)](https://www.bohemia.net/community/licenses/arma-public-license-share-alike).
+This re-release is licensed using the [Arma Public License Share Alike (APL-SA)](https://www.bohemia.net/community/licenses/arma-public-license-share-alike).
